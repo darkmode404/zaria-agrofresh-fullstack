@@ -7,46 +7,30 @@ namespace HPlusSport.API.Models
         public static void Seed(this ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Category>().HasData(
-                new Category { Id = 1, Name = "Active Wear - Men" },
-                new Category { Id = 2, Name = "Active Wear - Women" },
-                new Category { Id = 3, Name = "Mineral Water" },
-                new Category { Id = 4, Name = "Publications" },
-                new Category { Id = 5, Name = "Supplements" });
+                new Category { Id = 1, Name = "Tubers & Grains" },
+                new Category { Id = 2, Name = "Fresh Vegetables" },
+                new Category { Id = 3, Name = "Seasonal Fruits" },
+                new Category { Id = 4, Name = "Poultry & Dairy" },
+                new Category { Id = 5, Name = "Farm Seedlings & Inputs" });
 
             modelBuilder.Entity<Product>().HasData(
-                new Product { Id = 1, CategoryId = 1, Name = "Grunge Skater Jeans", Sku = "AWMGSJ", Price = 68, IsAvailable = true },
-                new Product { Id = 2, CategoryId = 1, Name = "Polo Shirt", Sku = "AWMPS", Price = 35, IsAvailable = true },
-                new Product { Id = 3, CategoryId = 1, Name = "Skater Graphic T-Shirt", Sku = "AWMSGT", Price = 33, IsAvailable = true },
-                new Product { Id = 4, CategoryId = 1, Name = "Slicker Jacket", Sku = "AWMSJ", Price = 125, IsAvailable = true },
-                new Product { Id = 5, CategoryId = 1, Name = "Thermal Fleece Jacket", Sku = "AWMTFJ", Price = 60, IsAvailable = true },
-                new Product { Id = 6, CategoryId = 1, Name = "Unisex Thermal Vest", Sku = "AWMUTV", Price = 95, IsAvailable = true },
-                new Product { Id = 7, CategoryId = 1, Name = "V-Neck Pullover", Sku = "AWMVNP", Price = 65, IsAvailable = true },
-                new Product { Id = 8, CategoryId = 1, Name = "V-Neck Sweater", Sku = "AWMVNS", Price = 65, IsAvailable = true },
-                new Product { Id = 9, CategoryId = 1, Name = "V-Neck T-Shirt", Sku = "AWMVNT", Price = 17, IsAvailable = true },
-                new Product { Id = 10, CategoryId = 2, Name = "Bamboo Thermal Ski Coat", Sku = "AWWBTSC", Price = 99, IsAvailable = true },
-                new Product { Id = 11, CategoryId = 2, Name = "Cross-Back Training Tank", Sku = "AWWCTT", Price = 0, IsAvailable = false },
-                new Product { Id = 12, CategoryId = 2, Name = "Grunge Skater Jeans", Sku = "AWWGSJ", Price = 68, IsAvailable = true },
-                new Product { Id = 13, CategoryId = 2, Name = "Slicker Jacket", Sku = "AWWSJ", Price = 125, IsAvailable = true },
-                new Product { Id = 14, CategoryId = 2, Name = "Stretchy Dance Pants", Sku = "AWWSDP", Price = 55, IsAvailable = true },
-                new Product { Id = 15, CategoryId = 2, Name = "Ultra-Soft Tank Top", Sku = "AWWUTT", Price = 22, IsAvailable = true },
-                new Product { Id = 16, CategoryId = 2, Name = "Unisex Thermal Vest", Sku = "AWWUTV", Price = 95, IsAvailable = true },
-                new Product { Id = 17, CategoryId = 2, Name = "V-Next T-Shirt", Sku = "AWWVNT", Price = 17, IsAvailable = true },
-                new Product { Id = 18, CategoryId = 3, Name = "Blueberry Mineral Water", Sku = "MWB", Price = 2.8M, IsAvailable = true },
-                new Product { Id = 19, CategoryId = 3, Name = "Lemon-Lime Mineral Water", Sku = "MWLL", Price = 2.8M, IsAvailable = true },
-                new Product { Id = 20, CategoryId = 3, Name = "Orange Mineral Water", Sku = "MWO", Price = 2.8M, IsAvailable = true },
-                new Product { Id = 21, CategoryId = 3, Name = "Peach Mineral Water", Sku = "MWP", Price = 2.8M, IsAvailable = true },
-                new Product { Id = 22, CategoryId = 3, Name = "Raspberry Mineral Water", Sku = "MWR", Price = 2.8M, IsAvailable = true },
-                new Product { Id = 23, CategoryId = 3, Name = "Strawberry Mineral Water", Sku = "MWS", Price = 2.8M, IsAvailable = true },
-                new Product { Id = 24, CategoryId = 4, Name = "In the Kitchen with H+ Sport", Sku = "PITK", Price = 24.99M, IsAvailable = true },
-                new Product { Id = 25, CategoryId = 5, Name = "Calcium 400 IU (150 tablets)", Sku = "SC400", Price = 9.99M, IsAvailable = true },
-                new Product { Id = 26, CategoryId = 5, Name = "Flaxseed Oil 100 mg (90 capsules)", Sku = "SFO100", Price = 12.49M, IsAvailable = true },
-                new Product { Id = 27, CategoryId = 5, Name = "Iron 65 mg (150 caplets)", Sku = "SI65", Price = 13.99M, IsAvailable = true },
-                new Product { Id = 28, CategoryId = 5, Name = "Magnesium 250 mg (100 tablets)", Sku = "SM250", Price = 12.49M, IsAvailable = true },
-                new Product { Id = 29, CategoryId = 5, Name = "Multi-Vitamin (90 capsules)", Sku = "SMV", Price = 9.99M, IsAvailable = true },
-                new Product { Id = 30, CategoryId = 5, Name = "Vitamin A 10,000 IU (125 caplets)", Sku = "SVA", Price = 11.99M, IsAvailable = true },
-                new Product { Id = 31, CategoryId = 5, Name = "Vitamin B-Complex (100 caplets)", Sku = "SVB", Price = 12.99M, IsAvailable = true },
-                new Product { Id = 32, CategoryId = 5, Name = "Vitamin C 1000 mg (100 tablets)", Sku = "SVC", Price = 9.99M, IsAvailable = true },
-                new Product { Id = 33, CategoryId = 5, Name = "Vitamin D3 1000 IU (100 tablets)", Sku = "SVD3", Price = 12.49M, IsAvailable = true });
+                new Product { Id = 1, CategoryId = 1, Name = "Abuja Puna White Yam (3 Tubers)", Sku = "TUB-YAM3", Description = "Large, starchy farm-harvested white yams ideal for boiling or pounding.", Price = 7500, IsAvailable = true },
+                new Product { Id = 2, CategoryId = 1, Name = "Orange-Fleshed Sweet Potatoes (5kg)", Sku = "TUB-POT5", Description = "Nutrient-rich, naturally sweet potatoes freshly dug and cured.", Price = 3200, IsAvailable = true },
+                new Product { Id = 3, CategoryId = 1, Name = "Ofada Local Brown Rice (5kg Bag)", Sku = "GRN-OFA5", Description = "Stone-free unpolished aromatic local rice harvested this season.", Price = 6800, IsAvailable = true },
+                new Product { Id = 4, CategoryId = 1, Name = "Yellow Hybrid Maize Grain (10kg)", Sku = "GRN-MAZ10", Description = "Sun-dried whole yellow corn kernels for milling or livestock feed.", Price = 5500, IsAvailable = true },
+                new Product { Id = 5, CategoryId = 2, Name = "Roma Plum Tomatoes (2kg Basket)", Sku = "VEG-TOM2", Description = "Firm, vine-ripened plum tomatoes harvested at dawn.", Price = 2400, IsAvailable = true },
+                new Product { Id = 6, CategoryId = 2, Name = "Fluted Pumpkin Leaves / Ugu (Bundle)", Sku = "VEG-UGU1", Description = "Crisp, freshly cut organic green ugu leaves tied in farm bundles.", Price = 800, IsAvailable = true },
+                new Product { Id = 7, CategoryId = 2, Name = "Tatashe Bell Peppers & Atarodo Mix (1kg)", Sku = "VEG-PEP1", Description = "Sweet red bell peppers paired with fiery scotch bonnet habaneros.", Price = 1500, IsAvailable = true },
+                new Product { Id = 8, CategoryId = 2, Name = "Red Kaduna Onions (3kg Net)", Sku = "VEG-ONI3", Description = "Cured, pungent red onions with long shelf stability.", Price = 2600, IsAvailable = true },
+                new Product { Id = 9, CategoryId = 3, Name = "Sweet Sugar Baby Watermelon (Whole)", Sku = "FRT-MEL1", Description = "Crisp, deep-red seedless-style watermelon ripened on the vine.", Price = 2200, IsAvailable = true },
+                new Product { Id = 10, CategoryId = 3, Name = "Ripe Bananas & Plantain Bunch", Sku = "FRT-PLT1", Description = "Farm-ripened sweet bananas and green cooking plantains.", Price = 3500, IsAvailable = true },
+                new Product { Id = 11, CategoryId = 3, Name = "MD2 Golden Pineapple (Pair)", Sku = "FRT-PIN2", Description = "Low-acid, extra-sweet golden pineapples harvested at peak ripeness.", Price = 2800, IsAvailable = true },
+                new Product { Id = 12, CategoryId = 3, Name = "Alphonso & Julie Mangoes (2kg)", Sku = "FRT-MAN2", Description = "Fiberless, fragrant orchard mangoes picked fresh.", Price = 1900, IsAvailable = false },
+                new Product { Id = 13, CategoryId = 4, Name = "Free-Range Farm Eggs (Crate of 30)", Sku = "PLR-EGG30", Description = "Large brown-shell eggs from pasture-raised laying hens.", Price = 5400, IsAvailable = true },
+                new Product { Id = 14, CategoryId = 4, Name = "Dressed Broiler Chicken (2.2kg Whole)", Sku = "PLR-CHK2", Description = "Chilled, hygienically processed whole farm broiler.", Price = 6500, IsAvailable = true },
+                new Product { Id = 15, CategoryId = 4, Name = "Raw Wildflower Farm Honey (500ml)", Sku = "DRY-HON5", Description = "Unfiltered, pure golden honey harvested from orchard hives.", Price = 4200, IsAvailable = true },
+                new Product { Id = 16, CategoryId = 5, Name = "Hybrid Vegetable Seedling Tray (50 Cells)", Sku = "INP-SED50", Description = "Healthy tomato, pepper, and cabbage nursery transplants.", Price = 4500, IsAvailable = true },
+                new Product { Id = 17, CategoryId = 5, Name = "Organic Poultry Compost Manure (25kg)", Sku = "INP-CMP25", Description = "Aged, pathogen-free organic fertilizer for high crop yield.", Price = 3000, IsAvailable = true });
         }
     }
 }

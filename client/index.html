@@ -3,65 +3,82 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>H+ Sport Products</title>
+  <title>Zaria AgroFresh | Farm Produce Market</title>
   <link rel="stylesheet" href="styles.css">
   <script src="app.js" defer></script>
 </head>
 <body>
   <header class="page-header">
-    <p class="eyebrow">Student starter</p>
-    <h1>H+ Sport Products</h1>
-    <p>Browse the products provided by your ASP.NET Core API.</p>
+    <p class="eyebrow">Farm-to-Table Inventory System</p>
+    <h1>Zaria AgroFresh Market</h1>
+    <p>Fresh tubers, grains, vegetables, fruits, poultry, and farm inputs powered by ASP.NET Core Web API.</p>
   </header>
 
   <main>
     <section class="panel" aria-labelledby="add-product-heading">
-      <h2 id="add-product-heading">Add a product</h2>
+      <div class="panel-header">
+        <h2 id="add-product-heading">Add Farm Produce</h2>
+        <button id="cancel-edit-button" class="secondary-button hidden" type="button">Cancel Edit</button>
+      </div>
       <form id="product-form">
+        <input type="hidden" name="id" id="product-id">
         <label>
-          SKU
-          <input name="sku" required maxlength="40">
+          SKU Code
+          <input name="sku" placeholder="e.g. TUB-YAM4" required maxlength="40">
         </label>
         <label>
-          Name
-          <input name="name" required maxlength="120">
+          Produce Name
+          <input name="name" placeholder="e.g. Abuja White Yam (3 Tubers)" required maxlength="120">
         </label>
         <label class="wide">
-          Description
-          <input name="description" required maxlength="300">
+          Harvest Description
+          <input name="description" placeholder="Weight, grade, harvest notes..." required maxlength="300">
         </label>
         <label>
-          Price
-          <input name="price" type="number" min="0" step="0.01" required>
+          Price (NGN)
+          <input name="price" type="number" min="1" step="0.01" placeholder="3500" required>
         </label>
         <label>
           Category
           <select name="categoryId" required>
-            <option value="1">Active Wear - Men</option>
-            <option value="2">Active Wear - Women</option>
-            <option value="3">Mineral Water</option>
-            <option value="4">Publications</option>
-            <option value="5">Supplements</option>
+            <option value="1">Tubers & Grains</option>
+            <option value="2">Fresh Vegetables</option>
+            <option value="3">Seasonal Fruits</option>
+            <option value="4">Poultry & Dairy</option>
+            <option value="5">Farm Seedlings & Inputs</option>
           </select>
         </label>
         <label class="availability">
           <input name="isAvailable" type="checkbox" checked>
-          Available
+          In Stock / Ready for Dispatch
         </label>
-        <button type="submit">Add product</button>
+        <button type="submit" id="submit-button">Add to Inventory</button>
       </form>
     </section>
 
     <section class="products-section" aria-labelledby="products-heading">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">Connected to the API</p>
-          <h2 id="products-heading">Products</h2>
+          <p class="eyebrow">Live Farm Stock</p>
+          <h2 id="products-heading">Produce Catalog</h2>
         </div>
         <button id="refresh-button" class="secondary-button" type="button">
-          Refresh
+          Refresh Stock
         </button>
       </div>
+
+      <div class="filter-bar">
+        <input id="search-input" type="search" placeholder="Search yams, rice, vegetables, eggs, SKU...">
+        <select id="category-filter" aria-label="Filter by category">
+          <option value="all">All Categories</option>
+          <option value="1">Tubers & Grains</option>
+          <option value="2">Fresh Vegetables</option>
+          <option value="3">Seasonal Fruits</option>
+          <option value="4">Poultry & Dairy</option>
+          <option value="5">Farm Seedlings & Inputs</option>
+        </select>
+      </div>
+
       <p id="status" role="status" aria-live="polite"></p>
       <div id="products" class="products-grid"></div>
     </section>
